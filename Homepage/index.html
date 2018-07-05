@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>About me</title>
+        <meta charset="utf-8">
+        <style>
+    
+            html, body {
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .container {
+                width: 100%;
+                height: 100%;
+                overflow: overflow; 
+            }
+
+            .container div {
+                box-sizing: border-box;
+            }
+
+            /*tmp
+            div {
+                border: 1px solid #ccc;
+            }*/
+
+            /*.container > div {
+                width: 100%;
+                float:left;
+                clear: both;
+            }*/
+            .container > div > div{
+                margin-right: 5%; 
+            }
+
+            .row {    
+                margin: 2%;
+                margin-left: 7%;
+            }
+            .first-row{
+                height: 50%;
+            }
+
+            .separator {
+                border: 2px dashed #ccc;
+            }
+
+            .left {
+                float: left;
+                width: 45%;
+                height: 100%; 
+            }
+
+            .right {
+                float: right;
+                width: 45%;
+                height: 100%;
+            }
+
+            .header {
+                height: 60px;
+                font-size: 38px;
+                font-family: 'Knewave', cursive;
+                font-weight: bold;
+            }
+
+            .sub-header {
+                height: 60px;
+                font-size: 25px;
+                font-family: 'Knewave', cursive;
+                font-weight: bold;
+                color: yellow;
+            }
+
+            .description {
+                height: calc(100% - 130px);
+            }
+
+            .icon {
+                width: 100%;               
+            }
+
+            .avatar-icon {
+                background-image: url('img/avatar-icon.jpg');
+                background-position: -50px -9px;
+                background-repeat: no-repeat;                
+                height: 180px;
+            }
+
+            .avatar {
+                border: 1px solid black;
+                padding: 10px;
+                width: 150px;
+                height: 100%;
+            }
+
+            .avatar-description {
+                width: calc(100% - 150px);
+            }
+
+            progress {
+                height: 21px;
+                width: 60%;
+                margin: 5px;
+                margin-left: 15px;
+            }
+            progress:before {
+                content: attr(data-label);
+                vertical-align: middle;
+                padding-left: 10px;
+            }
+
+            .progress-value {
+                height: 21px;
+                display: inline-block;
+                vertical-align: bottom;
+                margin-left: 10px;
+                font-style: italic;
+            }
+
+            .reward-container {
+                width: 100%;
+                text-align: center;
+            }
+            .reward {
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                background-image: url('img/reward.png');
+                background-position: 0 0;
+                background-repeat: no-repeat;
+                margin: 10px 20px;
+            }
+            p{
+                font-style: italic;
+                padding: 0 20px;
+                margin: 0;
+            }
+            .service-picture{
+                width: 200px;
+                height: 300px;
+            }
+            .picture-icon{
+                background-image: url('img/Homer.png');
+                background-position: 0 0;
+                background-repeat: no-repeat;
+                width: 200px;
+                height: 300px;
+            }
+
+            .service-description{
+                width: calc(100% - 230px);
+                margin-top: 10px;
+            }
+            .award-p {
+                padding: 0;
+                margin: 5px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row first-row">
+                <div class="left">
+                    <div class="header">Who am I?</div>
+                    <div class="sub-header">A few words about me</div>
+                    <div class="description">
+                        <div class="left avatar"><div class="icon avatar-icon"></div></div>
+                        <div class="right avatar-description">
+                            <div>
+                                <p>description description description description
+                                    description description description description
+                                </p>
+                                <p>description description description description
+                                    description description description description
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="header">My scills</div>
+                    <div class="sub-header">What I am best at</div>
+                    <div class="description">
+                        <div>
+                            <progress max="100" value="83" data-label="HTML"></progress>
+                            <span class="progress-value">83%</span>
+                        </div>
+                        <div>
+                            <progress max="100" value="92" data-label="Web design"></progress>
+                            <span class="progress-value">92%</span>
+                        </div>
+                        <div>
+                            <progress max="100" value="99" data-label="Graphic design"></progress>
+                            <span class="progress-value">99%</span>
+                        </div>
+                        <div>
+                            <progress max="100" value="66" data-label="Typography"></progress>
+                            <span class="progress-value">66%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="row second-row">
+                <div class="left">
+                    <div class="header">Services</div>
+                    <div class="sub-header">Brand identity, print &#38; web</div>
+                    <div class="description">
+                        <div class="left sevice-picture"><div class="icon picture-icon"></div></div>
+                        <div class="right service-description">
+                                <p>description description description description
+                                    description description description description
+                                </p>
+                                <p>description description description description
+                                    description description description description
+                                </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="header">Awards</div>
+                    <div class="sub-header">My precioun collection</div>
+                    <div class="description">
+                        <div >
+                            <p class="award-p"> description description description description
+                                description description description description
+                            </p>
+                        </div>
+                        <div class="reward-container">
+                            <span class="reward"></span>
+                            <span class="reward"></span>
+                            <span class="reward"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
