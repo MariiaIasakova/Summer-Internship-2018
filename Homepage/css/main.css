@@ -1,0 +1,218 @@
+    
+            html, body {
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                background: linear-gradient( gainsboro, transparent 1px), 
+                linear-gradient( 90deg, gainsboro, transparent 1px);
+                background-size: 15px 15px;
+                background-position: center center;
+            }
+            .container {
+                width: 100%;
+                height: 100%;
+                overflow: overflow; 
+            }
+            .container div {
+                box-sizing: border-box;
+            }
+            .container > div > div{
+                margin-right: 5%; 
+            }
+            .row {    
+                margin: 2%;
+                margin-left: 7%;
+            }
+            .first-row{
+                height: 60%;
+            }
+            .separator {
+                border: 2px dashed gray;
+                margin: 2%;
+                margin-left: 7%;
+                margin-right: 7%;
+                position: relative;
+            }
+            .separator > .separator-icon {
+                position: absolute;
+                right: -5%;
+                top: -30px;
+                background-image: url('img/separator-icon.png');
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: 50%;
+                width: 60px;
+                height: 60px;
+            }
+            .left {
+                float: left;
+                width: 45%;
+                height: 100%; 
+            }
+            .right {
+                float: right;
+                width: 45%;
+                height: 100%;
+            }
+            .header {
+                height: 20%;
+                font-size: 400%;
+                font-family: 'Knewave', cursive;
+                font-weight: bold;
+            }
+            .sub-header {
+                height: 12%;
+                font-size: 180%;
+                font-family: 'Knewave', cursive;
+                font-weight: bold;
+                color: #f7ef1f;
+            }
+            .description {
+                height: calc(100% - 130px);
+            }
+            .icon {
+                width: 100%;               
+            }
+            .avatar-icon {
+                background-image: url('img/avatar-icon.jpg');
+                background-position: -50px -9px;
+                background-repeat: no-repeat;                
+                height: 180px;
+            }
+            .avatar {
+                border: 1px solid black;
+                padding: 10px;
+                width: 150px;
+                height: 200px;
+            }
+            .avatar-description {
+                width: calc(100% - 150px);
+            }
+            .avatar-description > div > div {
+                display: inline-block;
+                width: 300px;
+                font-weight: bold;
+                font-style: italic;
+                vertical-align: -webkit-baseline-middle;;
+            }
+            .avatar-description > div> p,
+            .service-description > p {
+                margin-bottom: 10px;
+            }
+            .avatar-description div.block{
+                display: inline-block;
+                width: 40px;
+                height: 15px;
+                margin: 5px;
+                margin-left: 20px;
+                background-color: #f7ef1f;
+                border: 1px solid #f7ef1f;
+                border-bottom-right-radius: 15px;
+                border-top-right-radius: 15px; 
+            }
+            .progress{
+                margin: 2%;
+                border: 2px solid transparent;
+            }
+            progress {
+                margin: 5px;
+                margin-left: 15px;
+                overflow: hidden;
+                width: 0;
+                height: 0;
+            }
+            progress:before {
+                
+                vertical-align: middle;
+                padding-left: 10px;
+            }
+            .progress-value {
+                height: 21px;
+                display: inline-block;
+                vertical-align: top;
+                margin-left: 10px;
+                font-style: italic;
+                font-weight: bold;
+            }
+            .progress-bg
+            {
+                display: inline-block;
+                background: #e6e9ed;
+                position: relative;
+                height: 20px;
+                width: 70%;
+                margin-right: 0
+            }
+            .progress-bg::before{
+                content: "";
+                position: absolute;
+                right: -10px;
+                bottom: 0;
+                width: 0;
+                height: 0;
+                border-left: 10px solid #e6e9ed;;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent; 
+            }
+            .progress-bg::after{
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 0;
+                border-left: 10px solid white;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;        
+            }
+
+            .progress-bar{
+                height: 100%;
+                content: attr(data-label);
+                background: #f7ef1f;
+                height: 100%;
+                display: inline-block;
+                padding-left: 20px;
+                font-style: italic;
+            }
+            
+            .reward-container {
+                width: 100%;
+                text-align: center;
+            }
+            .reward {
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                background-image: url('img/reward.png');
+                background-position: 0 0;
+                background-repeat: no-repeat;
+                margin: 10px 20px;
+            }
+            p{
+                font-style: italic;
+                padding: 0 20px;
+                margin: 0;
+            }
+            .sevice-picture {
+                width: 35%;
+            }
+            .picture-icon{
+                background-image: url('img/Homer.png');
+                background-position: 0 0;
+                background-repeat: no-repeat;
+                width: 200px;
+                height: 300px;
+            }
+            .service-description{
+                width: calc(100% - 230px);
+                margin-top: 10px;
+            }
+            
+            .award-p {
+                padding: 0;
+                margin: 5px;
+            }

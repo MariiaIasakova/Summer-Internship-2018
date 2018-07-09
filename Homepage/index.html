@@ -3,164 +3,7 @@
     <head>
         <title>About me</title>
         <meta charset="utf-8">
-        <style>
-    
-            html, body {
-                height: 100%;
-                width: 100%;
-                margin: 0;
-                padding: 0;
-            }
-
-            .container {
-                width: 100%;
-                height: 100%;
-                overflow: overflow; 
-            }
-
-            .container div {
-                box-sizing: border-box;
-            }
-
-            /*tmp
-            div {
-                border: 1px solid #ccc;
-            }*/
-
-            /*.container > div {
-                width: 100%;
-                float:left;
-                clear: both;
-            }*/
-            .container > div > div{
-                margin-right: 5%; 
-            }
-
-            .row {    
-                margin: 2%;
-                margin-left: 7%;
-            }
-            .first-row{
-                height: 50%;
-            }
-
-            .separator {
-                border: 2px dashed #ccc;
-            }
-
-            .left {
-                float: left;
-                width: 45%;
-                height: 100%; 
-            }
-
-            .right {
-                float: right;
-                width: 45%;
-                height: 100%;
-            }
-
-            .header {
-                height: 60px;
-                font-size: 38px;
-                font-family: 'Knewave', cursive;
-                font-weight: bold;
-            }
-
-            .sub-header {
-                height: 60px;
-                font-size: 25px;
-                font-family: 'Knewave', cursive;
-                font-weight: bold;
-                color: yellow;
-            }
-
-            .description {
-                height: calc(100% - 130px);
-            }
-
-            .icon {
-                width: 100%;               
-            }
-
-            .avatar-icon {
-                background-image: url('img/avatar-icon.jpg');
-                background-position: -50px -9px;
-                background-repeat: no-repeat;                
-                height: 180px;
-            }
-
-            .avatar {
-                border: 1px solid black;
-                padding: 10px;
-                width: 150px;
-                height: 100%;
-            }
-
-            .avatar-description {
-                width: calc(100% - 150px);
-            }
-
-            progress {
-                height: 21px;
-                width: 60%;
-                margin: 5px;
-                margin-left: 15px;
-            }
-            progress:before {
-                content: attr(data-label);
-                vertical-align: middle;
-                padding-left: 10px;
-            }
-
-            .progress-value {
-                height: 21px;
-                display: inline-block;
-                vertical-align: bottom;
-                margin-left: 10px;
-                font-style: italic;
-            }
-
-            .reward-container {
-                width: 100%;
-                text-align: center;
-            }
-            .reward {
-                display: inline-block;
-                width: 100px;
-                height: 100px;
-                background-image: url('img/reward.png');
-                background-position: 0 0;
-                background-repeat: no-repeat;
-                margin: 10px 20px;
-            }
-            p{
-                font-style: italic;
-                padding: 0 20px;
-                margin: 0;
-            }
-            .service-picture{
-                width: 200px;
-                height: 300px;
-            }
-            .picture-icon{
-                background-image: url('img/Homer.png');
-                background-position: 0 0;
-                background-repeat: no-repeat;
-                width: 200px;
-                height: 300px;
-            }
-
-            .service-description{
-                width: calc(100% - 230px);
-                margin-top: 10px;
-            }
-            .award-p {
-                padding: 0;
-                margin: 5px;
-            }
-
-        </style>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
     </head>
     <body>
         <div class="container">
@@ -172,12 +15,20 @@
                         <div class="left avatar"><div class="icon avatar-icon"></div></div>
                         <div class="right avatar-description">
                             <div>
-                                <p>description description description description
-                                    description description description description
+                                <p> If I told you that I had a neurological disease which meant
+                                     that for eight or more hours a day I lost control of my faculties,
+                                     bade farewell to the outside world, and was subject to complex hallucinations and delusions 
+                                     – such as being chased by a grizzly bear at Stockport Railway Station 
+                                     – you would think I was in a pretty bad way. 
                                 </p>
-                                <p>description description description description
-                                    description description description description
+                                <p>Of course, sleep is not a disease at all, but the condition of daily (nightly) life for
+                                     the vast majority of us.
                                 </p>
+                            </div>
+                            <div>
+                                <div class="block"></div>
+                                <div>«Hire me, I’m really good.»
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -186,26 +37,44 @@
                     <div class="header">My scills</div>
                     <div class="sub-header">What I am best at</div>
                     <div class="description">
-                        <div>
-                            <progress max="100" value="83" data-label="HTML"></progress>
-                            <span class="progress-value">83%</span>
+                        <div class="progress">
+                            <div class="progress-bg">
+                                <div class="progress-bar" style="width: 83%">
+                                    HTML
+                                </div>
+                            </div>
+                            <div class="progress-value">83%</div>
                         </div>
-                        <div>
-                            <progress max="100" value="92" data-label="Web design"></progress>
-                            <span class="progress-value">92%</span>
+                        <div class="progress">
+                            <div class="progress-bg">
+                                <div class="progress-bar" style="width: 92%">
+                                    Web design
+                                </div>
+                            </div>
+                            <div class="progress-value">92%</div>
                         </div>
-                        <div>
-                            <progress max="100" value="99" data-label="Graphic design"></progress>
-                            <span class="progress-value">99%</span>
+                        <div class="progress">
+                            <div class="progress-bg">
+                                <div class="progress-bar" style="width: 99%">
+                                    Graphic design
+                                </div>
+                            </div>
+                            <div class="progress-value">99%</div>
                         </div>
-                        <div>
-                            <progress max="100" value="66" data-label="Typography"></progress>
-                            <span class="progress-value">66%</span>
+                        <div class="progress">
+                            <div class="progress-bg">
+                                <div class="progress-bar" style="width: 66%">
+                                    Typography
+                                </div>
+                            </div>
+                            <div class="progress-value">66%</div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="separator"></div>
+            <div class="separator">
+                <div class="separator-icon"></div>
+            </div>
             <div class="row second-row">
                 <div class="left">
                     <div class="header">Services</div>
@@ -213,11 +82,18 @@
                     <div class="description">
                         <div class="left sevice-picture"><div class="icon picture-icon"></div></div>
                         <div class="right service-description">
-                                <p>description description description description
-                                    description description description description
+                                <p>Since all animals sleep, we assume it has a biological purpose. 
+                                    The trouble is, we don’t know what that purpose is. 
+                                    There are many theories – energy conservation, growth promotion,
+                                     immobilisation during hours of darkness when it might be dangerous
+                                      to be out and about, consolidation of memories – but they are all open 
+                                      to serious objections. 
                                 </p>
-                                <p>description description description description
-                                    description description description description
+                                <p>William Dement, one of the leading researchers 
+                                      of the last century and co-discoverer of Rapid Eye Movement sleep,
+                                       concluded from his fifty years in the forefront of the field that 
+                                       “the only reason we need to sleep that is really, really solid,
+                                        is that we get sleepy.”
                                 </p>
                         </div>
                     </div>
@@ -227,8 +103,11 @@
                     <div class="sub-header">My precioun collection</div>
                     <div class="description">
                         <div >
-                            <p class="award-p"> description description description description
-                                description description description description
+                            <p class="award-p"> Not only is sleep a reminder of our ultimate helplessness, 
+                                or even of how circumscribed a place thought sometimes plays in our lives, 
+                                there is also the fear of contagion, as if talking about sleep might induce it – 
+                                just as this reference to yawning will get at least 50% of you yawning 
+                                in the next 15 minutes. <strong>(It’s a fact, honest!)</strong>
                             </p>
                         </div>
                         <div class="reward-container">
