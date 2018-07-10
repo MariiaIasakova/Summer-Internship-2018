@@ -63,6 +63,8 @@ var enemies = [];
 var explosions = [];
 var maxMegalithCount = 3;
 var megaliths = [];
+var maxManaCount = 10;
+var manas = [];
 
 var lastFire = Date.now();
 var gameTime = 0;
@@ -71,6 +73,8 @@ var terrainPattern;
 
 var score = 0;
 var scoreEl = document.getElementById('score');
+var manaScore = 0;
+var manaEl = document.getElementById('mana');
 
 // Speed in pixels per second
 var playerSpeed = 200;
@@ -108,9 +112,19 @@ function update(dt) {
         }); 
     }
 
+    if (Math.random() < 0.1 && manas.length < maxManaCount) {
+        var x = Math.random() * (canvas.width - 60);
+        var y = Math.random() * (canvas.height - 60);
+        manas.push({
+            pos: [x, y],
+            sprite: new Sprite('img/sprites.png', [0, 155], [60, 60])
+        }); 
+    }
+
     checkCollisions();
 
     scoreEl.innerHTML = score;
+    manaEl.innerHTML = manaScore;
 };
 
 function handleInput(dt) {
@@ -159,6 +173,11 @@ function updateEntities(dt) {
     // update megaliths
     for(var i=0; i<megaliths.length; i++) {
         megaliths[i].sprite.update(dt);
+    }
+
+    // update manas
+    for(var i=0; i<manas.length; i++) {
+        manas[i].sprite.update(dt);
     }
 
     // Update all the bullets
@@ -232,6 +251,7 @@ function boxCollides(pos, size, pos2, size2) {
 function checkCollisions() {
     checkPlayerBounds();
     checkMegalithsBounds();
+    checkMana();
 
     for(var i=0; i<bullets.length; i++) {
         var alive = true;
@@ -345,6 +365,29 @@ function checkMegalithsBounds() {
     }
 }
 
+function checkMana() {
+    for(var i=0; i<manas.length; i++) {
+        var pos = manas[i].pos;
+        var size = manas[i].sprite.size;
+
+        if(boxCollides(pos, size, player.pos, player.sprite.size)) {
+            manas.splice(i, 1);
+            manaScore += 10;
+            // Add an explosion
+            explosions.push({
+                pos: pos,
+                sprite: new Sprite('img/sprites.png',
+                                [0, 155],
+                                [60, 60],
+                                16,
+                                [0, 1, 2, 3],
+                                null,
+                                true)
+            });
+        }
+    }
+}
+
 function restorePos(entity) {
     entity.pos[0] = entity.oldPos[0];
     entity.pos[1] = entity.oldPos[1]
@@ -369,6 +412,7 @@ function render() {
     renderEntities(enemies);
     renderEntities(explosions);
     renderEntities(megaliths);
+    renderEntities(manas);
 };
 
 function renderEntities(list) {
@@ -398,6 +442,7 @@ function reset() {
     isGameOver = false;
     gameTime = 0;
     score = 0;
+    manaScore = 0;
 
     enemies = [];
     bullets = [];

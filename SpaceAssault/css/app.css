@@ -27,10 +27,11 @@ canvas {
     color: #757575;
 }
 
-#score {
+#score, #mana {
     float: right;
     color: white;
     font-size: 2em;
+    clear: both;
 }
 
 .key {
