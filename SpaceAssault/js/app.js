@@ -106,9 +106,12 @@ function update(dt) {
     ) {
         var x = canvas.width / 2 + Math.random() * (canvas.width / 2 - 60);
         var y = Math.random() * (canvas.height - 53);
+        var imgSprite = (Math.floor(Math.random() * canvas.width) % 2 == 0)
+            ? new Sprite('img/sprites.png', [0, 212], [60, 53])
+            : new Sprite('img/sprites.png', [0, 267], [60, 53]);
         megaliths.push({
             pos: [x, y],
-            sprite: new Sprite('img/sprites.png', [0, 212], [60, 53])
+            sprite: imgSprite
         }); 
     }
 
@@ -117,7 +120,7 @@ function update(dt) {
         var y = Math.random() * (canvas.height - 60);
         manas.push({
             pos: [x, y],
-            sprite: new Sprite('img/sprites.png', [0, 155], [60, 60])
+            sprite: new Sprite('img/sprites.png', [0, 155], [60, 60], 2, [0,1,0])
         }); 
     }
 
